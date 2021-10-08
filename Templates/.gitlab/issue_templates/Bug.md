@@ -1,33 +1,25 @@
-## Summary
+# Summary
 
-*Summarize the bug encountered concisely*
+*Summarize the bug encountered concisely.*
 
-## Steps to reproduce
+# Steps to reproduce
 
-*How one can reproduce the issue - this is very important*
+*How one can reproduce the issue.*
 
-## Example Project
+# What is the current bug behavior?
 
-*If possible, please create an example project here on GitLab.com that exhibits the problematic
-behavior, and link to it here in the bug report.
-If you are using an older version of GitLab, this will also determine whether the bug has been fixed
-in a more recent version*
+*What actually happens.*
 
-## What is the current bug behavior?
+# What is the expected correct behavior?
 
-*What actually happens*
+*What you should see instead.*
 
-## What is the expected correct behavior?
+# Relevant logs and/or screenshots
 
-*What you should see instead*
+*Paste any relevant logs using `code blocks` to format console output, logs, and code, as it's very hard to read otherwise.*
 
-## Relevant logs and/or screenshots
+# Additional information/comments
 
-*Paste any relevant logs - please use code blocks (```) to format console output, logs, and code, as
-it's very hard to read otherwise.*
-
-## Additional information/comments
-
-*Insert here, optional*
+*Optional: Additional information/comments*
 
 /label ~Bug
