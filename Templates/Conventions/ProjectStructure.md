@@ -24,7 +24,7 @@ At least the following labels must be available for a group:
     - Done (#00b140, Purpose: TODO)
     - Rejected (#7a0000, Purpose: TODO)
 
-All issues must get one state-descriptor-label at least one issue-type-descriptor-label.
+All issues must get at least one issue-type-descriptor-label and must always have exactly one state-descriptor-label.
 
 ## Repository-Structure
 

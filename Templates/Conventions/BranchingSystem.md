@@ -6,6 +6,9 @@ Merge "via mergerequest" means a merge-request on the source-control-management/
 
 Merge without the "via mergerequest"-attribute can either also be done via mergerequest and/or it can be done manually/using scripts. this depends on the project and must be defined by the product-owner.
 
+Mergerequests are only required for merges to `stable`. When a mergerequest to `stable` will be created then all issues which are implemented on the mergerequest-source-branch must be linked. Mergerequests without having one (or more) linked issues are not allowed.
+A mergerequest must not contain changes which are not related to any issue linked in the mergerequest.
+
 ## Branches and their meaning
 
 The following branches will be used:
