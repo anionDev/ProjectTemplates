@@ -1,0 +1,3 @@
+# GitLabTemplates
+
+Contains useful templates.
