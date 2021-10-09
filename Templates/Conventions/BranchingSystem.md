@@ -36,3 +36,12 @@ The `main`-branch contains tags of versions which are already released. Only the
 - When the source-branch of the merge was `stable` then merge `main` back into `stable` using a ff-commit.
 
 It is not allowed to commit or push on `main` or `stable` directly. Only exception: When a merge-commit to `main` was created without mergerequest then the merge-commit is allowed to get pushed on `main` and `stable`.
+
+## Branch-protection
+
+the following recommendations for branch protections result from the description above:
+
+| Branch | Allowed to merge         | Allowed to push | Allowed to force push  |
+|--------|--------------------------|-----------------|------------------------|
+| main   | Maintainers              | Maintainers     |           No           |
+| stable | Developers + Maintainers | No one          |           No           |
