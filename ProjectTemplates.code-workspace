@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "UpdateCommonFiles",
+				"type": "python",
+				"request": "launch",
+				"program": "UpdateCommonFiles.py",
+				"cwd": "${workspaceFolder}/Internal/Scripts",
+				"console": "integratedTerminal"
+			}
+		]
+	}
+}
