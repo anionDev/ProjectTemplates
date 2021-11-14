@@ -8,28 +8,28 @@ tag-prefix: 'v'
 branches:
   stable:
     regex: ^stable\/\S+
-    increment: Minor
+    increment: Patch
     mode: ContinuousDelivery
     source-branches: ['main']
   feature:
     regex: ^feature\/\S+
     increment: Minor
     mode: ContinuousDelivery
-    source-branches: ['main']
+    source-branches: ['stable']
   bug:
     regex: ^bug\/\S+
     increment: Patch
     mode: ContinuousDelivery
-    source-branches: ['main']
+    source-branches: ['stable']
   codequality:
     regex: ^codequality\/\S+
     increment: Patch
     mode: ContinuousDelivery
-    source-branches: ['main']
+    source-branches: ['stable']
   other:
     regex: ^other\/\S+
     increment: Patch
     mode: ContinuousDelivery
-    source-branches: ['main']
+    source-branches: ['stable']
 ignore:
   sha: []
