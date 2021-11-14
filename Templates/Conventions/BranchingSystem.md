@@ -33,12 +33,14 @@ It is not allowed to commit on the `main`- and `stable`-branch directly. Changes
 Always when a merge to `main` will be done, then the following things must be done:
 
 - Add a git-tag to the merge-commit containing the version-number.
+- Run build-/release-pipeline.
 - Optionally: Create a release of this version on the productive-system.
 - When the source-branch of the merge was `bug/_issuenumber_` then merge `main` into `stable` without mergerequest. If possible, use a ff-merge.
 - When the source-branch of the merge was `stable` then merge `main` back into `stable` using a ff-merge.
 
 Always when a merge to `stable` will be done, then the following things must be done:
 
+- Optionally: Run build-/release-pipeline.
 - Add a git-tag to the merge-commit containing the version-number. (Only when it was not a ff-merge.)
 - Optionally: Create a release of this version on the quality-management-system.
 
