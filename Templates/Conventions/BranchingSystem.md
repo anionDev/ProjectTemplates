@@ -13,8 +13,8 @@ A mergerequest must not contain changes which are not related to any issue linke
 
 The following branches will be used:
 
-- `main` (contains the latest release, contains version-tags)
-- `stable` (default-branch, contains version-tags)
+- `main` (represents the latest release)
+- `stable` (represents the latest version, contains version-tags, is default-branch)
 - `feature/_issuenumber_`
 - `bug/_issuenumber_`
 - `codequality/_description_`
@@ -32,17 +32,22 @@ It is not allowed to commit on the `main`- and `stable`-branch directly. Changes
 
 Always when a merge to `main` will be done, then the following things must be done:
 
-- Add a git-tag to the merge-commit containing the version-number.
+- Run build-/release-pipeline.
 - Optionally: Create a release of this version on the productive-system.
 - When the source-branch of the merge was `bug/_issuenumber_` then merge `main` into `stable` without mergerequest. If possible, use a ff-merge.
 - When the source-branch of the merge was `stable` then merge `main` back into `stable` using a ff-merge.
 
 Always when a merge to `stable` will be done, then the following things must be done:
 
+- Optionally: Run build-/release-pipeline.
 - Add a git-tag to the merge-commit containing the version-number. (Only when it was not a ff-merge.)
 - Optionally: Create a release of this version on the quality-management-system.
 
 It is not allowed to commit or push on `main` or `stable` directly. Only exception: When a merge-commit was created without mergerequest then the merge-commit and the appropriate git-tag is allowed to get pushed.
+
+Only the `bug/_issuenumber_`-branches which are created from `main` and not from `stable` and the `stable`-branch are allowed to get merged into main.
+
+When a repository does not contain something like a buildpipeline and does not produce any build-artefact then the repository does not have to contain a `main`-branch.
 
 ## Branch-protection
 
@@ -51,4 +56,4 @@ The following recommendations for branch protections result from the description
 | Branch | Allowed to merge         | Allowed to push | Allowed to force push  |
 |--------|--------------------------|-----------------|------------------------|
 | main   | Maintainers              | Maintainers     |           No           |
-| stable | Developers + Maintainers | Maintainers     |           No           |
+| stable | Developers               | Maintainers     |           No           |

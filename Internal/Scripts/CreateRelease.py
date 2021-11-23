@@ -10,6 +10,6 @@ class release_creator:
     def create_release(self):
         self.sc.start_program_synchronously("python",f"UpdateCommonFiles.py",self.folder_of_current_file,verbosity=2,throw_exception_if_exitcode_is_not_zero=True,prevent_using_epew=True)
         self.sc.git_commit(self.repository_folder,"Updated common files")
-        self.sc.start_program_synchronously("SCCreateSimpleMergeWithoutRelease",f"'{self.repository_folder}' 'stable' 'main' 'projects.aniondev'",self.repository_folder,verbosity=2,throw_exception_if_exitcode_is_not_zero=True,prevent_using_epew=True)
+        self.sc.start_program_synchronously("SCCreateSimpleMergeWithoutRelease",f"{self.repository_folder} stable main projects.aniondev",self.repository_folder,verbosity=2,throw_exception_if_exitcode_is_not_zero=True,prevent_using_epew=True)
 
 release_creator().create_release()
