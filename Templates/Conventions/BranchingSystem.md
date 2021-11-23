@@ -53,4 +53,4 @@ The following recommendations for branch protections result from the description
 | Branch | Allowed to merge         | Allowed to push | Allowed to force push  |
 |--------|--------------------------|-----------------|------------------------|
 | main   | Maintainers              | Maintainers     |           No           |
-| stable | Developers + Maintainers | Maintainers     |           No           |
+| stable | Developers               | Maintainers     |           No           |
