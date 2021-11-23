@@ -49,6 +49,8 @@ Only the `bug/_issuenumber_`-branches which are created from `main` and not from
 
 When a repository does not contain something like a buildpipeline and does not produce any build-artefact then the repository does not have to contain a `main`-branch.
 
+Instead of merging the `stable`-branch directly in the `main`-branch when releasing the `stable`-version it is also allowed to create a `release`-branch on this commit and merge this `release`-branch to the `main`-branch due to a mergerequest. Before merging it is allowed to do commits on the `release`-branch.
+
 ## Branch-protection
 
 The following recommendations for branch protections result from the description above:
