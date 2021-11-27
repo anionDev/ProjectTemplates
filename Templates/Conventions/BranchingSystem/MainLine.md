@@ -2,12 +2,12 @@
 
 The branching system applied in this repository is MainLine.
 
-Branches must be created from the `main`-branch and must always be merged back to this branch. This merge-back can be done either bei a merge-request or by a commit of a maintainer.
+Branches must be created from the `main`-branch and must always be merged back to this branch. This merge-back can be done either by a merge-request or by a commit of a maintainer.
 When merging to the `main`-branch it is recommended to create a git-tag including the version-number.
 
 # Special branches
 
-There must be 2 branches: 
+There must be the following branch: 
 
 - `main` (default-branch)
 
