@@ -1,22 +1,25 @@
 # Branching-system
 
-Generally [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/) will be used as branching-systm.
+Generally [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/) will be applied as branching-systm.
 
-# Branches
+# Special branches
 
 There must be 2 branches: 
 
-- `stable` (default-branch)
-- `main` (contains version-tags)
+- `main` (default-branch)
+- `stable`
 
-Both branches are only allowed to get modified due to pull-requests or release-scripts.
+# Branch-usage
 
-When merging to stable (or immediately before) the build-pipeline should be executed.
+Only stable-based bug-branches and the main-branch (using a temporary `release`-branch) are allowed to get merged to stable-branch. Merging to the stable-branch and to the main-branch is only allowed via Merge-request and as non-ff-commit.
 
-When merging to main (or immediately before) the build-pipeline should be executed. Addtionally (when the build-pipeline ran without any issues) a git-tag (containing the version-number) on the merge-commit should be created and this version should be released.
+When a merge to the `stable`-branch is completed then `stable` must be merged back to `main` due to a Merge-request.
 
+When merging to `main` (or immediately before) the build-pipeline should be executed. The merge-request is not allowed to be completed when the build-pipeline fails.
 
-## Branch-protection
+When merging to `stable` (or immediately before) the build-pipeline should be executed. The merge-request is not allowed to be completed when the build-pipeline fails. Addtionally a git-tag (containing the version-number) on the merge-commit should be created and this version should be released.
+
+# Branch-protections
 
 The following recommendations for branch protections result from the description above:
 
