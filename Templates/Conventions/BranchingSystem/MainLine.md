@@ -1,6 +1,9 @@
 # Branching-system
 
-Branches must be created from the `main`-branch and must always be merged back to this branch again using a merge-request or a script.
+The branching system applied in this repository is MainLine.
+
+Branches must be created from the `main`-branch and must always be merged back to this branch. This merge-back can be done either bei a merge-request or by a commit of a maintainer.
+When merging to the `main`-branch it is recommended to create a git-tag including the version-number.
 
 # Special branches
 
