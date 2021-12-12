@@ -7,7 +7,7 @@ Below are copy-pastable descriptions for projects in markdown listed.
 ### GitFlow
 
 ```
-## Branching-system
+### Branching-system
 
 This repository applies the [GitFlow](https://projects.aniondev.de/CommonUtilities/Templates/ProjectTemplates/-/blob/main/Templates/Conventions/BranchingSystem/GitFlow.md)-branching-system.
 ```
@@ -15,7 +15,7 @@ This repository applies the [GitFlow](https://projects.aniondev.de/CommonUtiliti
 ### GitFlowSimplified
 
 ```
-## Branching-system
+### Branching-system
 
 This repository applies the [GitFlowSimplified](https://projects.aniondev.de/CommonUtilities/Templates/ProjectTemplates/-/blob/main/Templates/Conventions/BranchingSystem/GitFlowSimplified.md)-branching-system.
 ```
@@ -23,7 +23,7 @@ This repository applies the [GitFlowSimplified](https://projects.aniondev.de/Com
 ### MainLine
 
 ```
-## Branching-system
+### Branching-system
 
 This repository applies the [MainLine](https://projects.aniondev.de/CommonUtilities/Templates/ProjectTemplates/-/blob/main/Templates/Conventions/BranchingSystem/MainLine.md)-branching-system.
 ```
