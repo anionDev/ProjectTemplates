@@ -13,5 +13,5 @@ The file `ReadMe.md` must contain an information about the applied branching-sys
 ## Versions
 
 All finished milestones/versions must be git-tagged.
-The versioning scheme for tags must be `v{Major}.{Minor}.{Patch}`.
+The versioning scheme for tags of commits must be `v{Major}.{Minor}.{Patch}`.
 The version must be incremented due to the conditions described by (SemVer)[https://semver.org/].
