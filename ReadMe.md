@@ -2,8 +2,12 @@
 
 Contains useful templates.
 
-# Development
+## Repository-Structure
 
-## Branching-system
+This repository applies requirements defined by [MinimalRequirements](https://projects.aniondev.de/Common/ProjectTemplates/-/blob/main/Templates/Conventions/RepositoryStructure/MinimalRequirements.md).
 
-This repository applies the [MainLine](https://projects.aniondev.de/CommonUtilities/Templates/ProjectTemplates/-/blob/main/Templates/Conventions/BranchingSystem/MainLine.md)-branching-system.
+## Development
+
+### Branching-system
+
+This repository applies the [MainLine](https://projects.aniondev.de/Common/ProjectTemplates/-/blob/main/Templates/Conventions/BranchingSystem/MainLine.md)-branching-system.
