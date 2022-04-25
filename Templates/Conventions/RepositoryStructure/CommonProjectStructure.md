@@ -25,8 +25,8 @@ For each code-unit the repository must contain the following files and folder wi
 - `<codeunit>/Other/QualityCheck/TestCoverage/TestCoverage.xml`
 - `<codeunit>/Other/QualityCheck/TestCoverage/TestCoverageReport`
 - `<codeunit>/Other/Reference/GenerateReference.py`
-- `<codeunit>/Other/Reference/GeneratedReference`
 - `<codeunit>/Other/Reference/ReferenceContent`
+- `<codeunit>/Other/Reference/GeneratedReference`
 - `<codeunit>/Other/Build/Build.py`
 - `<codeunit>/Other/Build/BuildArtifact`
 - `<codeunit>/<codeunit>`
@@ -66,15 +66,15 @@ It is expected that the file `Linting.py` is a python3-script which exits with a
 
 It is expected that the file `GenerateReference.py` is a python3-script which generates or updates the reference in `GeneratedReference` and exits with a non-zero-exitcode if at least one error occurs.
 
-### `GeneratedReference`
-
-It is expected that after running `GenerateReference.py` the folder `GeneratedReference` contains a `index.html` containing a html-reference about the unittest based on `ReferenceContent`.
-The `GeneratedReference`-folder does not have to be committed.
-
 ### `ReferenceContent`
 
-The folder `ReferenceContent` must contain a reference for the code-unit.
-The `GeneratedReference`-folder must be committed.
+The folder `ReferenceContent` must contain a reference for the code-unit. The content of this folder is the source of the `GeneratedReference`-folder.
+The `ReferenceContent`-folder must be committed.
+
+### `GeneratedReference`
+
+It is expected that after running `GenerateReference.py` the folder `GeneratedReference` contains an `index.html`-file containing a html-reference about the code-unit on `ReferenceContent`.
+The `GeneratedReference`-folder does not have to be committed.
 
 ### `Build.py`
 
@@ -95,7 +95,7 @@ It is expected that the folder `<codeunit>` contains the file `<codeunit>.codeun
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
-<codeunit:codeunit codeunitspecificationversion="1.0.0" xmlns:codeunit="https://github.com/anionDev/ProjectTemplates" xmlns:schemaLocation="TODO">
+<codeunit:codeunit codeunitspecificationversion="1.0.0" xmlns:codeunit="https://github.com/anionDev/ProjectTemplates" xmlns:schemaLocation="https://raw.githubusercontent.com/anionDev/ProjectTemplates/main/Templates/Conventions/RepositoryStructure/codeunit.xsd">
     <codeunit:name>codeunit</codeunit:name>
     <codeunit:version>1.0.0</codeunit:version>
     <codeunit:minimalcodecoverageinpercent>90</codeunit:minimalcodecoverageinpercent>
