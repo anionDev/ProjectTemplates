@@ -21,9 +21,9 @@ Testcases for a code-unit are part of the code-unit and are not a further code-u
 For each code-unit the repository must contain the following files and folder with appropriate content:
 
 - `<codeunit>/Other/QualityCheck/RunTestcases.py`
+- `<codeunit>/Other/QualityCheck/Linting.py`
 - `<codeunit>/Other/QualityCheck/TestCoverage/TestCoverage.xml`
 - `<codeunit>/Other/QualityCheck/TestCoverage/TestCoverageReport`
-- `<codeunit>/Other/QualityCheck/Linting.py`
 - `<codeunit>/Other/Reference/GenerateReference.py`
 - `<codeunit>/Other/Reference/GeneratedReference`
 - `<codeunit>/Other/Reference/ReferenceContent`
@@ -94,11 +94,12 @@ It is expected that the folder `<codeunit>/<codeunit>` contains the source-code 
 It is expected that the folder `<codeunit>` contains the file `<codeunit>.codeunit` with the following xml-content.
 
 ```xml
-<codeunit codeunitspecificationversion="1.0.0">
-    <name>codeunit</name>
-    <version>1.0.0</version>
-    <minimalcodecoverageinpercent>90</minimalcodecoverageinpercent>
-</codeunit>
+<?xml version="1.0" encoding="UTF-8" ?>
+<codeunit:codeunit codeunitspecificationversion="1.0.0" xmlns:codeunit="https://github.com/anionDev/ProjectTemplates" xmlns:schemaLocation="TODO">
+    <codeunit:name>codeunit</codeunit:name>
+    <codeunit:version>1.0.0</codeunit:version>
+    <codeunit:minimalcodecoverageinpercent>90</codeunit:minimalcodecoverageinpercent>
+</codeunit:codeunit>
 ```
 
 The values inside the xml-document must obviously be adapted.
