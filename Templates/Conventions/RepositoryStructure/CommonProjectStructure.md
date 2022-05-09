@@ -27,27 +27,33 @@ For each code-unit the repository must contain the following files and folder wi
 - `<codeunit>/Other/Reference/GenerateReference.py`
 - `<codeunit>/Other/Reference/ReferenceContent`
 - `<codeunit>/Other/Reference/GeneratedReference`
+- `<codeunit>/Other/PrepareMerge.py`
 - `<codeunit>/Other/Build/Build.py`
 - `<codeunit>/Other/Build/BuildArtifact`
-- `<codeunit>/<codeunit>`
 - `<codeunit>/<codeunit>.codeunit`
+- `<codeunit>/<codeunit>`
 - `<codeunit>/<codeunit>Tests`
 
-A merge on the main-branch is only allowed if the scripts `RunTestcases.py`, `Linting.py`, `GenerateReference` and `Build.py` exits with 0 for each code-unit.
-At the latest when the merge-commit will be done then the following things must be done for each code-unit which has been changed in the merge:
+A merge on the main-branch is only allowed if the scripts `PrepareMerge.py`, `RunTestcases.py`, `Linting.py`, `GenerateReference`exits with 0 for each code-unit. It is also recommended to run `Build.py` to ensure that the build-script also runs without any errors.
 
-- The `TestCoverage.xml`-file must be updated by running `RunTestcases.py`.
-- The version in the `<codeunit>.codeunit`-file must be changed to a higher version.
+The project's version is defined by the output of `gitversion /showVariable MajorMinorPatch`.
 
 ## Further explanations
 
+### `PrepareMerge.py`
+
+It is expected that the file `PrepareMerge.py` is a python3-script which exits with a non-zero-exitcode if  it fails.
+This script is supposed to do things like update the version in `<codeunit>.codeunit` or other files of the code-unit.
+
+If the version of the code-unit should follow the project's version to always be the same, then `PrepareMerge.py` must update the version in `<codeunit>.codeunit` (and also in other files of this code-unit if desired).
+
 ### `RunTestcases.py`
 
-It is expected that the file `RunTestcases.py` is a python3-script which exits with a non-zero-exitcode if at least one testcase fails. This script does not have to consider the minimum test-coverage defined by `<codeunit>.codeunit` because this is a task of a release-script.
+It is expected that the file `RunTestcases.py` is a python3-script which exits with a non-zero-exitcode if at least one testcase fails. This script does not have to consider the minimum test-coverage defined by `<codeunit>.codeunit` because this is a task of a merge-script.
 
-If something like compiling is required to run the testcases then this script must do that. These compiled files may not be placed in any not git-ignored-folder.
+If something like compiling is required to run the testcases then this script must also do that. These compiled files may not be placed in any not git-ignored-folder.
 
-This script should generate or update `TestCoverage.xml` and `TestCoverageReport`.
+This script must generate or update `TestCoverage.xml` and `TestCoverageReport`.
 
 ### `TestCoverage.xml`
 
