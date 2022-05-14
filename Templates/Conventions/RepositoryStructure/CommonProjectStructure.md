@@ -31,14 +31,20 @@ For each code-unit the repository must contain the following files and folder wi
 - `<codeunit>/Other/Build/Build.py`
 - `<codeunit>/Other/Build/BuildArtifact`
 - `<codeunit>/<codeunit>.codeunit`
-- `<codeunit>/<codeunit>`
-- `<codeunit>/<codeunit>Tests`
 
+`<codeunit>` must be replaced by the name of the code-unit which must be in [Pascal-case](https://www.theserverside.com/definition/Pascal-case).
 A merge on the main-branch is only allowed if the scripts `PrepareMerge.py`, `RunTestcases.py`, `Linting.py`, `GenerateReference`exits with 0 for each code-unit. It is also recommended to run `Build.py` to ensure that the build-script also runs without any errors.
 
 The project's version is defined by the output of `gitversion /showVariable MajorMinorPatch`.
 
 ## Further explanations
+
+### `<codeunit>`
+
+It is expected that the folder `<codeunit>` contains the source-code of the code-unit including its testcases and (if available) the ui-translations of the project (e. g. `.arb`-files or `.xlf`-files).
+
+If the used programming language provides a specific sourcecode-structure recommended by the maintainer of the programming-language then it is recommended to follow these conventions. This recommendation still applies even the recommendations are contrary to the other regulations described here. The purpose of this is that some programming languages enforce a more or less strictly defined structure. It is often advisable to follow them and sometimes nearly impossible to not follow them. But it is definitely impossible in practice to find two programming languages or frameworks which have exactly the same project-structure, style-guide, etcetera.
+The aim of the common project structure is to be flexible and usable for many programming languages and frameworks, no matter what their requirements and recommendations say.Style-mixtures are inevitable when you use different programming languages for frontend and backend (and this is often the case). And this is absolutely fine because on the one hand this is normal and no problem in practice. And on the other hand code-units should be independent and there is no requirement to adjust the structure and style of a code-unit to another not recommended structure and style.
 
 ### `PrepareMerge.py`
 
@@ -91,10 +97,6 @@ The build-artefact should be placed in `BuildArtifact`.
 
 It is expected that the folder `BuildArtifact` is git-ignored.
 
-### `<codeunit>`
-
-It is expected that the folder `<codeunit>/<codeunit>` contains the source-code of the code-unit.
-
 ### `<codeunit>.codeunit`
 
 It is expected that the folder `<codeunit>` contains the file `<codeunit>.codeunit` with the following xml-content.
@@ -111,7 +113,3 @@ It is expected that the folder `<codeunit>` contains the file `<codeunit>.codeun
 The values inside the xml-document must obviously be adapted.
 
 While the project-version-specification is defined by [MinimalRequirements](./MinimalRequirements.md) a code-unit-version is independent of the project version but the rules to change code-unit-versions are the same as the rules for changing the project-version. So a code-unit-version can always be the same as the project-version but it does not have to.
-
-### `<codeunit>/<codeunit>Tests`
-
-It is expected that the folder `<codeunit>/<codeunit>Tests` contains the unit-tests of the code-unit.
