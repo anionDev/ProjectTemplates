@@ -27,13 +27,13 @@ For each code-unit the repository must contain the following files and folder wi
 - `<codeunit>/Other/Reference/GenerateReference.py`
 - `<codeunit>/Other/Reference/ReferenceContent`
 - `<codeunit>/Other/Reference/GeneratedReference`
-- `<codeunit>/Other/PrepareMerge.py`
+- `<codeunit>/Other/CommonTasks.py`
 - `<codeunit>/Other/Build/Build.py`
 - `<codeunit>/Other/Build/BuildArtifact`
 - `<codeunit>/<codeunit>.codeunit`
 
 `<codeunit>` must be replaced by the name of the code-unit which must be in [Pascal-case](https://www.theserverside.com/definition/Pascal-case).
-A merge on the main-branch is only allowed if the scripts `PrepareMerge.py`, `RunTestcases.py`, `Linting.py`, `GenerateReference`exits with 0 for each code-unit. It is also recommended to run `Build.py` to ensure that the build-script also runs without any errors.
+A merge on the main-branch is only allowed if the scripts `CommonTasks.py`, `RunTestcases.py`, `Linting.py`, `GenerateReference`exits with 0 for each code-unit. It is also recommended to run `Build.py` to ensure that the build-script also runs without any errors.
 
 The project's version is defined by the output of `gitversion /showVariable MajorMinorPatch`.
 
@@ -46,12 +46,12 @@ It is expected that the folder `<codeunit>` contains the source-code of the code
 If the used programming language provides a specific sourcecode-structure recommended by the maintainer of the programming-language then it is recommended to follow these conventions. This recommendation still applies even the recommendations are contrary to the other regulations described here. The purpose of this is that some programming languages enforce a more or less strictly defined structure. It is often advisable to follow them and sometimes nearly impossible to not follow them. But it is definitely impossible in practice to find two programming languages or frameworks which have exactly the same project-structure, style-guide, etcetera.
 The aim of the common project structure is to be flexible and usable for many programming languages and frameworks, no matter what their requirements and recommendations say.Style-mixtures are inevitable when you use different programming languages for frontend and backend (and this is often the case). And this is absolutely fine because on the one hand this is normal and no problem in practice. And on the other hand code-units should be independent and there is no requirement to adjust the structure and style of a code-unit to another not recommended structure and style.
 
-### `PrepareMerge.py`
+### `CommonTasks.py`
 
-It is expected that the file `PrepareMerge.py` is a python3-script which exits with a non-zero-exitcode if  it fails.
+It is expected that the file `CommonTasks.py` is a python3-script which exits with a non-zero-exitcode if  it fails.
 This script is supposed to do things like update the version in `<codeunit>.codeunit` or other files of the code-unit.
 
-If the version of the code-unit should follow the project's version to always be the same, then `PrepareMerge.py` must update the version in `<codeunit>.codeunit` (and also in other files of this code-unit if desired).
+If the version of the code-unit should follow the project's version to always be the same, then `CommonTasks.py` must update the version in `<codeunit>.codeunit` (and also in other files of this code-unit if desired).
 
 ### `RunTestcases.py`
 
