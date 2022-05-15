@@ -2,3 +2,12 @@ mergerequest
 Mergerequests
 no-ff-commit
 ff-commit
+SemVer
+non-zero-exitcode
+unittest
+cobertura
+compilable
+non-ff-commit
+ff-merge
+ui
+sourcecode

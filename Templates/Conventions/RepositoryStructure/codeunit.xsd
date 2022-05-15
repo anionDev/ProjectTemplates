@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://github.com/anionDev/ProjectTemplates" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="codeunit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="name"/>
+        <xs:element type="xs:string" name="version"/>
+        <xs:element type="xs:byte" name="minimalcodecoverageinpercent"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="codeunitspecificationversion"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

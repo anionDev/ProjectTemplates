@@ -1,9 +1,15 @@
-# GitLabTemplates
+# ProjectTemplates
 
-Contains useful templates.
+This repository contains proposals for structuring [git](https://git-scm.com/)-repositories.
 
-# Development
+## Repository-Conventions
 
-## Branching-system
+### Structure
 
-This repository applies the [MainLine](https://projects.aniondev.de/CommonUtilities/Templates/ProjectTemplates/-/blob/main/Templates/Conventions/BranchingSystem/MainLine.md)-branching-system.
+This repository applies requirements defined by [MinimalRequirements](./Templates/Conventions/RepositoryStructure/MinimalRequirements.md).
+
+### Development
+
+#### Branching-system
+
+This repository applies the [MainLine](./Templates/Conventions/BranchingSystem/MainLine.md)-branching-system.
