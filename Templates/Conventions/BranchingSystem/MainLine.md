@@ -3,7 +3,7 @@
 The branching system applied in this repository is MainLine.
 
 Branches must be created from the `main`-branch and must always be merged back to this branch. This merge-back can be done either by a merge-request or by a commit of a maintainer.
-When merging to the `main`-branch it is recommended to create a git-tag including the version-number.
+When merging to the `main`-branch it must be a non-ff-commit and it is recommended to create a git-tag on the merge-commit including the version-number.
 
 ## Special branches
 

@@ -39,7 +39,7 @@ The purpose of this templates-repository to add additional standards which make 
 
 ### Structure
 
-This repository applies requirements defined by [MinimalRequirements](./Templates/Conventions/RepositoryStructure/MinimalRequirements.md).
+This repository implements the structure-requirements defined by [MinimalRequirements](./Templates/Conventions/RepositoryStructure/MinimalRequirements/MinimalRequirements.md).
 
 ### Development
 
