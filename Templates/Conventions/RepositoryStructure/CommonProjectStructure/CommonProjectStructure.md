@@ -54,11 +54,13 @@ The name of a codeunit must be in [Pascal-case](https://www.theserverside.com/de
 A merge on the main-branch is only allowed if the scripts `CommonTasks.py`, `RunTestcases.py`, `Linting.py`, `GenerateReference.py` exits with 0 for each codeunit.
 It is also recommended to run `Build.py` for each codeunit to ensure that the build-script also runs without any errors.
 
+## Further explanations
+
+### Version
+
 The project's version is defined by the output of `gitversion /showVariable MajorMinorPatch`.
 The version must be incremented due to the conditions described by [SemVer](https://semver.org/).
 Additional to that, the major-version is also be allowed to be increased when large or important features will be added or if it is appropriate for business-reasons.
-
-## Further explanations
 
 ### `<codeunit>`
 
@@ -140,7 +142,7 @@ It is expected that the folder `<codeunit>` contains the file `<codeunit>.codeun
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
-<codeunit:codeunit codeunitspecificationversion="1.0.0" xmlns:codeunit="https://github.com/anionDev/ProjectTemplates" xmlns:schemaLocation="https://raw.githubusercontent.com/anionDev/ProjectTemplates/main/Templates/Conventions/RepositoryStructure/codeunit.xsd">
+<codeunit:codeunit codeunitspecificationversion="1.0.0" xmlns:codeunit="https://github.com/anionDev/ProjectTemplates" xmlns:schemaLocation="https://raw.githubusercontent.com/anionDev/ProjectTemplates/main/Templates/Conventions/RepositoryStructure/CommonProjectStructure/codeunit.xsd">
     <codeunit:name>codeunit</codeunit:name>
     <codeunit:version>1.0.0</codeunit:version>
     <codeunit:minimalcodecoverageinpercent>90</codeunit:minimalcodecoverageinpercent>
