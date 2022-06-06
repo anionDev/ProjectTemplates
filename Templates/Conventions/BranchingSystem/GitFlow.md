@@ -30,7 +30,7 @@ When merging to `main` or `stable` (or immediately before) the build-pipeline mu
 Additionally, when merging to `main` a git-tag (containing the version-number) on the merge-commit must be created.
 
 When merging to `stable` then the build-artifact created by the build-pipeline immediately before is supposed to be released.
-When mergint to `stable` then the merge-commit is not allowed to be git-tagged.
+When merging to `stable` then the merge-commit is not allowed to be git-tagged.
 The reason for that is that the commit on a `stable`-branch is treated as release.
 And a release (in this sense) is based on a version which is already defined by the latest `main`-branch's version which is contained in the `stable`-branch.
 There may be commits "between" the `main`- and the `stable`-branch if (and only if) commits will be done on the `release`-branch in the context of the merge-request from `main` to `stable`.
@@ -51,4 +51,4 @@ The following recommendations for branch protections result from the description
 
 #### Build-pipeline
 
-Typically "build-pipeline" means an automated "classical" pipeline executed by the collaboration-server and its build-server (e. g. GitLab or Azure DevOps) but using build-scripts are also acceptable in the sense of this `GitFLow`-definition.
+Typically "build-pipeline" means an automated "classical" pipeline executed by the collaboration-server and its build-server (e. g. [GitLab](https://gitlab.com/) or [Azure DevOps Server](https://azure.microsoft.com/en-us/services/devops/server)) but using build-scripts are also fine in the sense of this `GitFLow`-definition.
