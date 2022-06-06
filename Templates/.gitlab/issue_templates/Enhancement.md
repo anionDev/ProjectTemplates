@@ -1,17 +1,19 @@
-# Summary
+# *Title*
+
+## Summary
 
 *Summarize the concrete idea concisely.*
 
-# Advantage
+## Advantage
 
 *Describe the concrete advantage of this enhancement.*
 
-# Background
+## Background
 
-*Optional: Describe the background to be able to understand this enhancement better.*
+*Optional: Describe the background to be able to understand this enhancement and its usecases better.*
 
-# Additional information/comments
+## Additional information/comments
 
-*Optional: Additional information/comments*
+*Optional: Add additional information/comments.*
 
 /label ~Enhancement

@@ -30,7 +30,7 @@ It is reasonable to add a few requirements also for structuring git-repositories
 A unique standardized file-structure inside a repository.
 This helps everyone to use unique build-pipelines and -scripts with only a few parameters.
 Management of a repository will be easier because there is less proliferation and more well-known structure.
-For this proposals are templates and specifictions defined in this repository.
+For this proposals are templates and specifications defined in this repository.
 To use it, there is not need to restructure existing projects.
 Existing projects can simply be adapted to standardized repository-structures defined in this repository.
 The purpose of this templates-repository to add additional standards which make standard-tasks available in a unique standardized-way, applicable for nearly all projects.
