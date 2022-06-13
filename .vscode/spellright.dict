@@ -8,7 +8,9 @@ unittest
 cobertura
 compilable
 non-ff-commit
+non-ff-mergecommit
 ff-merge
+nonff-merge
 ui
 sourcecode
 codeunit

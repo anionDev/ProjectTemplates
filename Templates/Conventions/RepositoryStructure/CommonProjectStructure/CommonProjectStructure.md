@@ -52,9 +52,9 @@ Additional to that there are the following folder which must be git-ignored but 
 `<codeunit>` must be replaced by the name of the codeunit.
 There are the following rules for the name of a codeunit:
 
-- It is supposed to be a meaningful english name or abbreviation.
+- It is supposed to be a meaningful English name or abbreviation.
 - It must be in [Pascal-case](https://www.theserverside.com/definition/Pascal-case).
-- It is primary intented to be a project-internal label 
+- It is primary intended to be a project-internal label
 
 A merge on the main-branch is only allowed if the scripts `CommonTasks.py`, `RunTestcases.py`, `Linting.py`, `GenerateReference.py` exits with 0 for each codeunit.
 It is also recommended to run `Build.py` for each codeunit to ensure that the build-script also runs without any errors.
@@ -167,6 +167,6 @@ While the project-version-specification is defined by [MinimalRequirements](./Mi
 
 ### Language
 
-The only language which is allowed to be used in the repository is english.
-This comprises the entire committed content including source-code, markdown-files, license-files, foldernames, etcetera.
+The only language which is allowed to be used in the repository is English.
+This comprises the entire committed content including source-code, markdown-files, license-files, folder-names, etcetera.
 The only exceptions of this rule are certain labels (such as the project name for example) and the content of ui-translations for obvious reasons.

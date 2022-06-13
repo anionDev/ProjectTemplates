@@ -19,15 +19,15 @@ To update the application inside the application must be started using an image 
 When the application will be started using a newer application-version than the last time the application was started then all files in the shared folders will automatically migrated to the new version so that the user can simply use a newer version of the application without changing any data in a shared folder manually.
 This requirement only applies for updates where the minor- or patch-version changed. For major-updates this behavior is required if an unattended migration should be possible.
 
-The application is not allowed to run when the data in the shared folder have the structure of an older major-version which is not migratable unattendedly. In this case the application must show information about this issue and exit with a non-zero-exitcode.
+The application is not allowed to run when the data in the shared folder have the structure of an older major-version which is not migratable in an unattended way. In this case the application must show information about this issue and exit with a non-zero-exitcode.
 
 ### Permissions inside Container
 
-The 
+TODO
 
 ### Versioning
 
 The versioning scheme for tags of `stable` releases of the images must be `v{Major}.{Minor}.{Patch}`.
-The version must be incremented due to the conditions described by (SemVer)[https://semver.org/].
+The version must be incremented due to the conditions described by [SemVer](https://semver.org/).
 There must always be a `latest`-tag which points to the same image as the latest `stable`-release-tag.
 The image-version does not define the application-version. So the image-version and the version of the application inside the application may differ.
