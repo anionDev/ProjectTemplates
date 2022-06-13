@@ -23,7 +23,8 @@ All other branches must have a name matching one of the following name-patterns:
 
 Only the `main`-branch (using a temporary `release`-branch) are allowed to get merged to `stable`-branch. It is not allowed to merge the same version to the `stable`-branch twice. Merging to the `stable`-branch and to the `main`-branch is only allowed via merge-request and as non-ff-commit.
 
-When merging a `release`-branch to the `stable`-branch is completed then `stable` must be merged back to `main` as soon as possible due to another merge-request.
+When merging a `release`-branch to the `stable`-branch is completed and there were commits done on the `release`-branch then `stable` must be merged back to `main` as soon as possible due to another merge-request which results in a non-ff-mergecommit.
+After that the version of the main-branch must be incremented/tagged accordingly.
 
 When merging to `main` or `stable` (or immediately before) the build-pipeline must be executed. The merge-request is not allowed to be completed when the build-pipeline or any other related scripts/tasks/validations fail.
 
