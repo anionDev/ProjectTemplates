@@ -153,7 +153,7 @@ The folder `BuildArtifact` must be git-ignored.
 
 Common subfolder-names for build-artifacts are:
 
-- `Container`: For container images (e. g. docker-images)
+- `ApplicationImage`: For images to run the application in a container (e. g. docker-images)
 - `Wheel`: For python-packages (`.whl`-files)
 - `Nuget`: For nuget-packages (`.nupkg`-files)
 - `BuildResult`: For plain build-result-files (binary files, "dist"-folder of node-projects, etc.)
